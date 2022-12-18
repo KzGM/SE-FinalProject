@@ -1,0 +1,3 @@
+﻿@model ShopTestSE.Models.PaymentType
+@Html.DropDownListFor(model => model.PaymentTypeID, new SelectList(Model.PayCollection, 
+    "PaymentTypeID", "Type", "--Select--"))

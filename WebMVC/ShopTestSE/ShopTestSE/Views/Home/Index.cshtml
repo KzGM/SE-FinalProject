@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link rel="stylesheet" type="text/css" href="~/Template/styles/bootstrap4/bootstrap.min.css">
+<link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="~/Template/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Template/styles/responsive.css">
+
+<style>
+    .main {
+        width: 100%;
+        background-image: url(http://imc.net.vn/wp-content/uploads/2020/11/The-medicine-Food-supplement-duality.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 50%;
+    }
+
+    .text_h6 {
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+</style>
+
+<h1>Welcome to our company</h1>
+<h6 class="text_h6">Let's buy our products, we have a good offer for you!</h6>
+
+<div class="main">
+    <div class="main_slider">
+        <div class="container fill_height">
+            <div class="row align-items-center fill_height">
+                <div class="col">
+                    <div class="main_slider_content">
+                        <div class="red_button shop_now_button"><a href="@Url.Action("Index", "Products")">shop now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Template/js/jquery-3.2.1.min.js"></script>
+<script src="~/Template/styles/bootstrap4/popper.js"></script>
+<script src="~/Template/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="~/Template/plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="~/Template/plugins/easing/easing.js"></script>
+<script src="~/Template/js/custom.js"></script>

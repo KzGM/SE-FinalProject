@@ -1,0 +1,13 @@
+﻿@using ShopTestSE.Models;
+@model List<Category>
+
+@{
+    foreach (var item in Model)
+    {
+        <li><a href="#">@item.CategoryName </a></li>
+    }
+}
+
+
+
+

@@ -1,0 +1,187 @@
+﻿@model IEnumerable<ShopTestSE.Models.Product>
+
+@{
+    ViewBag.Title = "Shop";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Template/styles/bootstrap4/bootstrap.min.css">
+<link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="~/Template/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="~/Template/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Template/styles/categories_responsive.css">
+
+<h2>Index</h2>
+
+<div class="sidebar">
+    <div class="sidebar_section">
+        <div class="sidebar_title">
+            <h5>Product Category</h5>
+        </div>
+        <ul class="sidebar_categories">
+            @Html.Action("CategoryPartial", "Category") 
+        </ul>
+    </div>
+</div>
+
+<div class="main_content">
+
+    <!-- Products -->
+
+    <div class="products_iso">
+        <div class="row">
+            <div class="col">
+
+                <!-- Product Sorting -->
+
+                <div class="product_sorting_container product_sorting_container_top">
+                    <ul class="product_sorting">
+                        <li>
+                            <span class="type_sorting_text">Default Sorting</span>
+                            <i class="fa fa-angle-down"></i>
+                            <ul class="sorting_type">
+                                <li class="type_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>Default Sorting</span></li>
+                                <li class="type_sorting_btn" data-isotope-option='{ "sortBy": "price" }'><span>Price</span></li>
+                                <li class="type_sorting_btn" data-isotope-option='{ "sortBy": "name" }'><span>Product Name</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Show</span>
+                            <span class="num_sorting_text">6</span>
+                            <i class="fa fa-angle-down"></i>
+                            <ul class="sorting_num">
+                                <li class="num_sorting_btn"><span>6</span></li>
+                                <li class="num_sorting_btn"><span>12</span></li>
+                                <li class="num_sorting_btn"><span>24</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="pages d-flex flex-row align-items-center">
+                        <div class="page_current">
+                            <span>1</span>
+                            <ul class="page_selection">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+                        </div>
+                        <div class="page_total"><span>of</span> 3</div>
+                        <div id="next_page" class="page_next"><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+                    </div>
+
+                </div>
+
+
+                @Html.Action("ProductListPartial", "Products")
+                <!-- Product Grid -->
+                @*@if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        
+                    }
+                }*@
+
+
+
+
+
+                <!-- Product Sorting -->
+
+                <div class="product_sorting_container product_sorting_container_bottom clearfix">
+                    <ul class="product_sorting">
+                        <li>
+                            <span>Show:</span>
+                            <span class="num_sorting_text">04</span>
+                            <i class="fa fa-angle-down"></i>
+                            <ul class="sorting_num">
+                                <li class="num_sorting_btn"><span>01</span></li>
+                                <li class="num_sorting_btn"><span>02</span></li>
+                                <li class="num_sorting_btn"><span>03</span></li>
+                                <li class="num_sorting_btn"><span>04</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <span class="showing_results">Showing 1–3 of 12 results</span>
+                    <div class="pages d-flex flex-row align-items-center">
+                        <div class="page_current">
+                            <span>1</span>
+                            <ul class="page_selection">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+                        </div>
+                        <div class="page_total"><span>of</span> 3</div>
+                        <div id="next_page_1" class="page_next"><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+			
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    @*<tr>*@
+        @*<th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </th>
+        <th></th>*@
+    @*</tr>*@
+
+    @*@foreach (var item in Model)
+    {
+        <tr>*@
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>*@
+            @*<td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
+            </td>*@
+        @*</tr>*@
+    @*}*@
+
+</table>
+
+<script src="~/Template/js/jquery-3.2.1.min.js"></script>
+<script src="~/Template/styles/bootstrap4/popper.js"></script>
+<script src="~/Template/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="~/Template/plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="~/Template/plugins/easing/easing.js"></script>
+<script src="~/Template/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="~/Template/js/categories_custom.js"></script>

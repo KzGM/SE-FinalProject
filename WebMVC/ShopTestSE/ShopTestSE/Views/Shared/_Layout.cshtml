@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - DoubleN Company</title>
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/bootstrap4/bootstrap.min.css">
+    <link href="~/Template/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Template/styles/responsive.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <div class="main_nav_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <div class="logo_container">
+                        <a href="@Url.Action("Index", "Home")">DoubleN<span>Comapy</span></a>
+                    </div>
+                    <nav class="navbar">
+                        <ul class="navbar_menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Shop", "Index", "Products")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                        <ul class="navbar_user">
+                            <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            <li class="checkout">
+                                <a href="@Url.Action("Index", "ShoppingCart")">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span id="checkout_items" class="checkout_items">2</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="hamburger_container">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
+                            <ul class="footer_nav">
+                                <li><a href="#">FAQs</a></li>
+                                <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
+                            <ul>
+                                <li><a href="https://www.facebook.com/profile.php?id=100014220549607"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.skype.com/en/"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer_nav_container">
+                            <div class="cr">&copy; @DateTime.Now.Year - Nguyen Nghia Co ,.Ltd</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Template/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Template/styles/bootstrap4/popper.js"></script>
+    <script src="~/Template/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/Template/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/Template/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/Template/plugins/easing/easing.js"></script>
+    <script src="~/Template/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿@using ShopTestSE.Models;
+@model ShopTestSE.Models.PaymentType
+@{
+    ViewBag.Title = "CheckOut";
+}
+
+<h2>CheckOut</h2>
+
+@{
+    if (Session["Cart"] != null)
+    {
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub total</th>
+            </tr>
+
+            @foreach (var cart in (List<Cart>)Session["Cart"])
+            {
+                <tr>
+                    <td>@cart.Product.ProductName</td>
+                    <td>@cart.Product.Price</td>
+                    <td>
+                        <input type="text" name="quantity" id="quantity" value="@cart.Quantity" readonly />
+                    </td>
+                    <td>@(string.Format("{0:N0}", cart.Product.Price * cart.Quantity))</td>
+                </tr>
+            }
+            <tr>
+                <td colspan="3">Total:</td>
+                <td>
+                    @{
+                        List<Cart> temp = (List<Cart>)Session["Cart"];
+                        var total = String.Format("{0:N0}", temp.Sum(x => x.Quantity * x.Product.Price));
+                    }
+                    @total VND
+                </td>
+            </tr>
+        </table>
+    }
+    else
+    {
+        <h4>No items in your cart</h4>
+    }
+}
+<br />
+@using (Html.BeginForm("ConfirmOder", "ShoppingCart", FormMethod.Post, new { id = "customer-form" }))
+{
+    <table>
+        <tr>
+            <td colspan="3" style="text-align:center;"><b>Customer's Information</b></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="cusName" /></td>
+        </tr>
+        <tr>
+            <td>Phone:</td>
+            <td><input type="text" name="cusPhone" /></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><input type="text" name="cusAddress" /></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.PaymentTypeID, htmlAttributes: new { @class = "control-label col-md-2" })</td>
+            <td>
+                @{Html.RenderAction("ChoosePaymentType", "Products");}
+                @Html.ValidationMessageFor(model => model.PaymentTypeID, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><input type="submit" value="Confirm Order" /></td>
+        </tr>
+    </table>
+}
+
+
+<script type="text/javascript">
+    $("#customer-form").validate({
+        rules: {
+            cusName: {
+                required: true
+            },
+            cusPhone: {
+                required: true
+            },
+            cusAddress: {
+                required: true
+            }
+        }
+    });
+</script>
