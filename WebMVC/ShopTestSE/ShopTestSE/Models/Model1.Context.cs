@@ -25,11 +25,12 @@ namespace ShopTestSE.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Accountant> Accountants { get; set; }
+        public virtual DbSet<Agent> Agents { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<PaymentType> PaymentTypes { get; set; }
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<Agent> Agents { get; set; }
     }
 }
