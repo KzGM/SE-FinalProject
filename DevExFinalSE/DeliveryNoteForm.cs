@@ -56,7 +56,7 @@ namespace DevExFinalSE
         private void DeliveryNoteForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'test_se2DataSet2.OrderDetail' table. You can move, or remove it, as needed.
-            this.orderDetailTableAdapter.Fill(this.test_se2DataSet2.OrderDetail);
+            //this.orderDetailTableAdapter.Fill(this.test_se2DataSet2.OrderDetail);
             loadData();
             loadAgentID();
             loadPID();

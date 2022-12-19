@@ -25,12 +25,12 @@ namespace DevExFinalSE
         private void ImportForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'test_se2DataSet2.Accountant' table. You can move, or remove it, as needed.
-            this.accountantTableAdapter1.Fill(this.test_se2DataSet2.Accountant);
+            //this.accountantTableAdapter1.Fill(this.test_se2DataSet2.Accountant);
             // TODO: This line of code loads data into the 'test_se2DataSet2.Orders' table. You can move, or remove it, as needed.
-            this.ordersTableAdapter.Fill(this.test_se2DataSet2.Orders);
+            //this.ordersTableAdapter.Fill(this.test_se2DataSet2.Orders);
             // TODO: This line of code loads data into the 'test_se2DataSet2.OrderDetail' table. You can move, or remove it, as needed.
-            this.orderDetailTableAdapter.Fill(this.test_se2DataSet2.OrderDetail);
-            this.accountantTableAdapter.Fill(this.goodManageDataSet.Accountant);
+            //this.orderDetailTableAdapter.Fill(this.test_se2DataSet2.OrderDetail);
+            //this.accountantTableAdapter.Fill(this.goodManageDataSet.Accountant);
             loadData();
             loadIID();
             loadAccID();

@@ -14,7 +14,7 @@ namespace DevExFinalSE
 
         public static void CreateConnection() 
         {
-            con.ConnectionString = "Data Source=LAPTOP-1OHG4VJT;Initial Catalog=test_se2;Integrated Security=True";
+            con.ConnectionString = "Data Source=(local)\\SQLEXPRESS;Initial Catalog=test_se2;Integrated Security=True";
             try
             {
                 con.Open();

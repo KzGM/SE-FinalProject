@@ -33,8 +33,8 @@ namespace DevExFinalSE
         }
         private void ValidateUser()
         {
-            string ConnectionString = @"Data Source=LAPTOP-1OHG4VJT;Initial Catalog=test_se;Integrated Security=True";
-            string query = "SELECT role from UserData WHERE UserName = @username and Password=@password";
+            string ConnectionString = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=test_se2;Integrated Security=True";
+            string query = "SELECT role from UserAcc WHERE UserID = @username and UserPassword=@password";
             string returnValue = "";
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
