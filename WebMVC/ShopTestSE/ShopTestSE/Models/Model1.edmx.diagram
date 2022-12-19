@@ -5,17 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="41fb2c74f8314dd0bb069974a33abfb9" Name="Diagram1">
-        <EntityTypeShape EntityType="ShopModel.Category" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopModel.Order" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopModel.PaymentType" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShopModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="ShopModel.FK_Product_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="ShopModel.FK_Order_PaymentType" ManuallyRouted="false" />
-        <AssociationConnector Association="ShopModel.FK_OrderDetail_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="ShopModel.FK_OrderDetail_Product" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="ShopModel.Agent" Width="1.5" PointX="0.75" PointY="8.375" />
-        <AssociationConnector Association="ShopModel.FK_Order_Agent" />
+        <EntityTypeShape EntityType="ShopModel.Accountant" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ShopModel.Agent" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="ShopModel.Category" Width="1.5" PointX="0.75" PointY="9.375" />
+        <EntityTypeShape EntityType="ShopModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="ShopModel.Order" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="ShopModel.PaymentType" Width="1.5" PointX="0.75" PointY="1.375" />
+        <EntityTypeShape EntityType="ShopModel.Product" Width="1.5" PointX="3" PointY="8.875" />
+        <AssociationConnector Association="ShopModel.FK_Orders_Agent" />
+        <AssociationConnector Association="ShopModel.FK_Product_Category" />
+        <AssociationConnector Association="ShopModel.FK_OrderDetail_Orders" />
+        <AssociationConnector Association="ShopModel.FK_OrderDetail_Product" />
+        <AssociationConnector Association="ShopModel.FK_Orders_PaymentType" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

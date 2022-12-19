@@ -25,9 +25,9 @@ namespace ShopTestSE.Models
         public Nullable<int> AgentID { get; set; }
         public Nullable<System.DateTime> OrderDate { get; set; }
     
-        public virtual PaymentType PaymentType { get; set; }
+        public virtual Agent Agent { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
-        public virtual Agent Agent { get; set; }
+        public virtual PaymentType PaymentType { get; set; }
     }
 }
