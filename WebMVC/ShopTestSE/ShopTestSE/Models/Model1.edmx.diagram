@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="ShopModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1" />
         <EntityTypeShape EntityType="ShopModel.Order" Width="1.5" PointX="3" PointY="1" />
         <EntityTypeShape EntityType="ShopModel.PaymentType" Width="1.5" PointX="0.75" PointY="1.375" />
-        <EntityTypeShape EntityType="ShopModel.Product" Width="1.5" PointX="3" PointY="8.875" />
+        <EntityTypeShape EntityType="ShopModel.Product" Width="1.5" PointX="3.25" PointY="8.875" />
         <AssociationConnector Association="ShopModel.FK_Orders_Agent" />
         <AssociationConnector Association="ShopModel.FK_Product_Category" />
         <AssociationConnector Association="ShopModel.FK_OrderDetail_Orders" />
